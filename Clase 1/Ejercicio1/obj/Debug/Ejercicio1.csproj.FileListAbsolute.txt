@@ -5,3 +5,10 @@ C:\Users\alumno\Desktop\Nueva carpeta\Aplicacion1\Aplicacion1\obj\Debug\Ejercici
 C:\Users\alumno\Desktop\Nueva carpeta\Aplicacion1\Aplicacion1\obj\Debug\Ejercicio1.csproj.CoreCompileInputs.cache
 C:\Users\alumno\Desktop\Nueva carpeta\Aplicacion1\Aplicacion1\obj\Debug\Aplicacion1.exe
 C:\Users\alumno\Desktop\Nueva carpeta\Aplicacion1\Aplicacion1\obj\Debug\Aplicacion1.pdb
+C:\Users\Diego\Desktop\laboratorio\laboratorio_ii\Clase 1\Ejercicio1\bin\Debug\Aplicacion1.exe.config
+C:\Users\Diego\Desktop\laboratorio\laboratorio_ii\Clase 1\Ejercicio1\bin\Debug\Aplicacion1.exe
+C:\Users\Diego\Desktop\laboratorio\laboratorio_ii\Clase 1\Ejercicio1\bin\Debug\Aplicacion1.pdb
+C:\Users\Diego\Desktop\laboratorio\laboratorio_ii\Clase 1\Ejercicio1\obj\Debug\Ejercicio1.csprojAssemblyReference.cache
+C:\Users\Diego\Desktop\laboratorio\laboratorio_ii\Clase 1\Ejercicio1\obj\Debug\Ejercicio1.csproj.CoreCompileInputs.cache
+C:\Users\Diego\Desktop\laboratorio\laboratorio_ii\Clase 1\Ejercicio1\obj\Debug\Aplicacion1.exe
+C:\Users\Diego\Desktop\laboratorio\laboratorio_ii\Clase 1\Ejercicio1\obj\Debug\Aplicacion1.pdb

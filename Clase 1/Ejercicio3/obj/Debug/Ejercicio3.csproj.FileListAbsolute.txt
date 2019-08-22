@@ -1,0 +1,7 @@
+C:\Users\Diego\Desktop\laboratorio\laboratorio_ii\Clase 1\Ejercicio3\bin\Debug\Ejercicio3.exe.config
+C:\Users\Diego\Desktop\laboratorio\laboratorio_ii\Clase 1\Ejercicio3\bin\Debug\Ejercicio3.exe
+C:\Users\Diego\Desktop\laboratorio\laboratorio_ii\Clase 1\Ejercicio3\bin\Debug\Ejercicio3.pdb
+C:\Users\Diego\Desktop\laboratorio\laboratorio_ii\Clase 1\Ejercicio3\obj\Debug\Ejercicio3.csprojAssemblyReference.cache
+C:\Users\Diego\Desktop\laboratorio\laboratorio_ii\Clase 1\Ejercicio3\obj\Debug\Ejercicio3.csproj.CoreCompileInputs.cache
+C:\Users\Diego\Desktop\laboratorio\laboratorio_ii\Clase 1\Ejercicio3\obj\Debug\Ejercicio3.exe
+C:\Users\Diego\Desktop\laboratorio\laboratorio_ii\Clase 1\Ejercicio3\obj\Debug\Ejercicio3.pdb

@@ -43,7 +43,7 @@ namespace Ejercicio1
       }
       promedio = promedio / 5;
       Console.Clear();
-      Console.WriteLine("Promedio:{0}", promedio);
+      Console.WriteLine("Promedio: {0}", promedio);
       Console.WriteLine("Max: {0}", max);
       Console.WriteLine("Min: {0}", min);
       Console.ReadKey();
