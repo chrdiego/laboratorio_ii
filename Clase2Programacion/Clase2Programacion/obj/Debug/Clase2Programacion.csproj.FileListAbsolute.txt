@@ -1,0 +1,7 @@
+C:\Users\alumno\Desktop\chirdoromano\laboratorio_ii\Clase2Programacion\Clase2Programacion\bin\Debug\Clase2Programacion.exe.config
+C:\Users\alumno\Desktop\chirdoromano\laboratorio_ii\Clase2Programacion\Clase2Programacion\bin\Debug\Clase2Programacion.exe
+C:\Users\alumno\Desktop\chirdoromano\laboratorio_ii\Clase2Programacion\Clase2Programacion\bin\Debug\Clase2Programacion.pdb
+C:\Users\alumno\Desktop\chirdoromano\laboratorio_ii\Clase2Programacion\Clase2Programacion\obj\Debug\Clase2Programacion.csprojAssemblyReference.cache
+C:\Users\alumno\Desktop\chirdoromano\laboratorio_ii\Clase2Programacion\Clase2Programacion\obj\Debug\Clase2Programacion.csproj.CoreCompileInputs.cache
+C:\Users\alumno\Desktop\chirdoromano\laboratorio_ii\Clase2Programacion\Clase2Programacion\obj\Debug\Clase2Programacion.exe
+C:\Users\alumno\Desktop\chirdoromano\laboratorio_ii\Clase2Programacion\Clase2Programacion\obj\Debug\Clase2Programacion.pdb
