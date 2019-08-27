@@ -16,9 +16,12 @@ namespace Clase2Programacion
       double salida = 0;
       do
       {
-        Console.WriteLine("Ingrese un numero: ");
-        ingreso = Console.ReadLine();
-      } while (!int.TryParse(ingreso, out ingresoEntero));
+        do
+        {
+          Console.WriteLine("Ingrese un numero: ");
+          ingreso = Console.ReadLine();
+        } while (!int.TryParse(ingreso, out ingresoEntero));
+      } while (ingresoEntero < 0);
       Console.WriteLine(Cuadrado.PotenciarNumero(ingresoEntero,out salida).ToString());
       Console.WriteLine(salida.ToString());
       Console.ReadKey();
