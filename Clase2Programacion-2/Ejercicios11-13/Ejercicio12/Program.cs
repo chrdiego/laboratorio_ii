@@ -17,10 +17,12 @@ namespace Ejercicio12
       {
         do
         {
-          Console.WriteLine("Ingrese un numero: ");
-          numero = Console.ReadLine();
-        } while (int.TryParse(numero, out auxiliar));
-        Console.WriteLine("¿Desea continuar? (S/N)");
+           Console.WriteLine("\nIngrese un numero: ");
+           numero = Console.ReadLine();
+                    if (!int.TryParse(numero, out auxiliar))
+                        Console.WriteLine("\nERROR, solo se permiten numeros.");
+        }while (!int.TryParse(numero, out auxiliar));
+        Console.WriteLine("\n¿Desea continuar? (S/N)\n");
         ingreso = Console.ReadKey().KeyChar;
       }while (ValidarRespuesta.ValidaS_N(ingreso));
     }
