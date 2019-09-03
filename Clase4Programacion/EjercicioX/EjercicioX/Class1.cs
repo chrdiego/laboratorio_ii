@@ -8,56 +8,49 @@ namespace EjercicioX
 {
   class Empleado
   {
-    string nombre;
-    string apellido;
-    double SueldoBruto;
-    double SueldoNeto;
-    double Ley19032;
-    double ObraSocial;
+        string nombre;
+        string apellido;
+        int SueldoBruto;
+        int SueldoNeto;
+        int Jubilacion;
+        int Ley;
+        int ObraSocial;
 
-    public Empleado()
-    {
-      this.nombre = "Juan";
-      this.apellido = "Carlos";
-      this.SueldoBruto = 0;
-      this.SueldoNeto = 0;
-      this.Ley19032 = 0;
-      this.ObraSocial = 0;
-    }
+        public Empleado()
+        {
+            this.nombre = "Carlos";
+            this.apellido = "Perez";
+            this.SueldoBruto = 0;
+            this.SueldoNeto = 0;
+            this.Jubilacion = 0;
+            this.Ley = 0;
+            this.ObraSocial = 0;
+        }
+        public Empleado(string nombre, string apellido, int sueldoBruto) : this()
+        {
+            this.nombre = nombre;
+            this.apellido = apellido;
+            this.SueldoBruto = sueldoBruto;
+        }
+        public Empleado(string nombre, string apellido, int sueldoBruto, int sueldoNeto, int jubilacion, int ley, int obraSocial) : this(nombre, apellido, sueldoBruto)
+        {
+            this.SueldoNeto = sueldoNeto;
+            this.Jubilacion = jubilacion;
+            this.Ley = ley;
+            this.ObraSocial = obraSocial;
+        }
 
-    public Empleado(string nombre, string apellido, double sueldoBruto) : this ()
-    {
-      this.nombre = nombre;
-      this.apellido = apellido;
-      this.SueldoBruto = sueldoBruto;
-    }
+        public void CalcularNeto(int sueldoBruto)
+        {
+            this.Jubilacion = sueldoBruto * 3 / 100;
+            this.Ley = sueldoBruto * 3 / 100;
+            this.ObraSocial = sueldoBruto * 3 / 100;
+            this.SueldoNeto = sueldoBruto - this.Jubilacion - this.Ley - this.ObraSocial;
+        }
 
-    public Empleado(string nombre, string apellido, double sueldoBruto, double sueldoNeto, double ley, double obrasocial)
-      : this (nombre, apellido, sueldoBruto)
-    {
-      this.SueldoNeto = sueldoNeto;
-      this.Ley19032 = ley;
-      this.ObraSocial = obrasocial;
+        public void Mostrar()
+        {
+            Console.WriteLine("{0} {1} {2} {3} {4} {5} {6}", this.nombre, this.apellido, this.SueldoBruto, this.SueldoNeto, this.Ley, this.Jubilacion, this.ObraSocial);
+        }
     }
-    public Empleado CalcularNeto(double bruto)
-    {
-      double SueldoBruto = bruto;
-      double ley = 0;
-      double obraSocial = 0;
-      double SueldoNeto = 0;
-      double jubilacion = 0;
-      ley = SueldoBruto * 3 / 100;
-      obraSocial = SueldoBruto * 3 / 100;
-      jubilacion = SueldoBruto * 3 / 100;
-      SueldoNeto = SueldoBruto - ley - obraSocial - jubilacion;
-      return Empleado(this.nombre, this.apellido, this.SueldoBruto, SueldoNeto, ley, obraSocial);
-
-    }
-    public string Mostrar()
-    {
-      StringBuilder sb = new StringBuilder();
-      sb.AppendFormat("Nombre: {0} - Apellido {0} - Sueldo Bruto: {0} - Sueldo Neto: {0} - Ley: {0} - Obra social: {0}", this.nombre, this.apellido, this.SueldoBruto, this.SueldoNeto, this.Ley19032, this.ObraSocial);
-      return sb.ToString();
-    }
-  }
 }
