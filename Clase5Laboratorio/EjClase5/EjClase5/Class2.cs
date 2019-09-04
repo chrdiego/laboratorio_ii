@@ -35,19 +35,35 @@ namespace EjClase5
 
     public static bool operator ==(Estante e, Producto p)
     {
-      //return (e == p);
-      return (e.productos.Equals(p));
+      int i;
+      for(i=0;e==null;i++)
+      {
+        if (e.productos[i] == p)
+          return true;
+        else
+          return false;
+      }
     }
 
     public static bool operator !=(Estante e, Producto p)
     {
-      //return !(e == p);
-      return !(e.productos.Equals(p));
+      int i;
+      for (i = 0; e.productos == null; i++)
+      {
+        if !(e.productos[i] == p)
+          return true;
+        else
+          return false;
+      }
     }
 
     public static bool operator +(Estante e, Producto p)
     {
-      
+      int i;
+      do
+      {
+
+      }
     }
 
     public static Estante operator -(Estante e, Producto p)
