@@ -60,10 +60,32 @@ namespace Carga
       frmMostrar.Show(this);
     }
 
-    private void textApellido_TextChanged(object sender, EventArgs e)
+    public string ObtenerSexo()
     {
-
+      /*
+      foreach(Control item in this.groupBox.Controls)
+      {
+        if (item is RadioButton && ((RadioButton)item).Checked)
+          return item.Text;
+      }
+      */
+      if (this.radioButton1.Checked)
+        return "Masculino";
+      if (this.radioButton2.Checked)
+        return "Femenino";
+      else
+        return "Otro";
     }
 
+    private void Form1_Load(object sender, EventArgs e)
+    {
+      this.comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+      this.comboBox1.Items.Add("Buenos Aires");
+      this.comboBox1.Items.Add("CABA");
+      this.comboBox1.SelectedIndex = -1;
+      this.radioButton1.Checked = true;
+      //this.chbVive.ThreeState = true;
+      //this.chbVive.CheckState == CheckState.Indeterminate;
+    }
   }
 }

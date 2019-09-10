@@ -37,10 +37,12 @@ namespace Carga
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnMostrar = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.chbVive = new System.Windows.Forms.CheckBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -84,7 +86,6 @@ namespace Carga
             this.textApellido.Name = "textApellido";
             this.textApellido.Size = new System.Drawing.Size(100, 20);
             this.textApellido.TabIndex = 4;
-            this.textApellido.TextChanged += new System.EventHandler(this.textApellido_TextChanged);
             // 
             // textDNI
             // 
@@ -123,52 +124,76 @@ namespace Carga
             this.btnMostrar.UseVisualStyleBackColor = true;
             this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
             // 
-            // checkBox1
+            // chbVive
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(20, 19);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(80, 17);
-            this.checkBox1.TabIndex = 9;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.chbVive.AutoSize = true;
+            this.chbVive.Location = new System.Drawing.Point(26, 133);
+            this.chbVive.Name = "chbVive";
+            this.chbVive.Size = new System.Drawing.Size(47, 17);
+            this.chbVive.TabIndex = 9;
+            this.chbVive.Text = "Vive";
+            this.chbVive.UseVisualStyleBackColor = true;
             // 
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(20, 42);
+            this.radioButton1.Location = new System.Drawing.Point(17, 27);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(85, 17);
+            this.radioButton1.Size = new System.Drawing.Size(73, 17);
             this.radioButton1.TabIndex = 10;
             this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "radioButton1";
+            this.radioButton1.Text = "Masculino";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(21, 65);
+            this.comboBox1.Location = new System.Drawing.Point(26, 169);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 11;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.checkBox1);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.radioButton3);
+            this.groupBox1.Controls.Add(this.radioButton2);
             this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Location = new System.Drawing.Point(26, 123);
+            this.groupBox1.Location = new System.Drawing.Point(188, 121);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 100);
+            this.groupBox1.Size = new System.Drawing.Size(155, 111);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Text = "Sexo";
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(17, 75);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(45, 17);
+            this.radioButton3.TabIndex = 12;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "Otro";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(17, 52);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(71, 17);
+            this.radioButton2.TabIndex = 11;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Femenino";
+            this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(405, 323);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.chbVive);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnMostrar);
             this.Controls.Add(this.btnCancelar);
@@ -181,6 +206,7 @@ namespace Carga
             this.Controls.Add(this.lNombre);
             this.Name = "Form1";
             this.Text = "Carga";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -199,10 +225,12 @@ namespace Carga
     private System.Windows.Forms.Button btnAceptar;
     private System.Windows.Forms.Button btnCancelar;
     private System.Windows.Forms.Button btnMostrar;
-    private System.Windows.Forms.CheckBox checkBox1;
+    private System.Windows.Forms.CheckBox chbVive;
     private System.Windows.Forms.RadioButton radioButton1;
     private System.Windows.Forms.ComboBox comboBox1;
     private System.Windows.Forms.GroupBox groupBox1;
+    private System.Windows.Forms.RadioButton radioButton3;
+    private System.Windows.Forms.RadioButton radioButton2;
   }
 }
 
