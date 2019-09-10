@@ -19,7 +19,10 @@ namespace Carga
 
     private void FrmMostrar_Load(object sender, EventArgs e)
     {
-
+      for (int i = 0; i < ((Form1)this.Owner).personas.Length ; i++)
+      {
+        this.lstPersona.Items.Add(((Form1)this.Owner).personas[i].MostrarDatos());
+      }
     }
   }
 }

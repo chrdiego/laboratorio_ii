@@ -57,13 +57,13 @@ namespace Carga
     private void btnMostrar_Click(object sender, EventArgs e)
     {
       FrmMostrar frmMostrar = new FrmMostrar();
-      frmMostrar.Show();
-
+      frmMostrar.Show(this);
     }
 
     private void textApellido_TextChanged(object sender, EventArgs e)
     {
 
     }
+
   }
 }

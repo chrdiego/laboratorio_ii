@@ -19,6 +19,10 @@ namespace Carga
       this.dni = dni;
     }
 
+    public string MostrarDatos()
+    {
+      return this.nombre + " " + this.apellido + " " + this.dni;
+    }
   }
 }
 
