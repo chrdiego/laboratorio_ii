@@ -14,12 +14,6 @@ namespace Clase8
   public partial class Form2 : Form
   {
         Empresa empresa;
-        public Form2(Empresa empresa)
-         {
-             InitializeComponent();
-            this.empresa = empresa;
-         }
-       
         public Empresa Empresa
         {
             get
@@ -27,6 +21,12 @@ namespace Clase8
                 return this.empresa;
             }
         }
+        public Form2(Empresa empresa)
+         {
+             InitializeComponent();
+            this.empresa = empresa;
+         }
+       
 
         private void BtnAceptar_Click(object sender, EventArgs e)
         {

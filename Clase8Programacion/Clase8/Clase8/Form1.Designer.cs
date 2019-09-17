@@ -114,6 +114,7 @@ namespace Clase8
             // mtxtLegajo
             // 
             this.mtxtLegajo.Location = new System.Drawing.Point(146, 58);
+            this.mtxtLegajo.Mask = "000-0000-000";
             this.mtxtLegajo.Name = "mtxtLegajo";
             this.mtxtLegajo.Size = new System.Drawing.Size(139, 20);
             this.mtxtLegajo.TabIndex = 9;
@@ -121,6 +122,7 @@ namespace Clase8
             // mtxtSalario
             // 
             this.mtxtSalario.Location = new System.Drawing.Point(146, 105);
+            this.mtxtSalario.Mask = "$99999";
             this.mtxtSalario.Name = "mtxtSalario";
             this.mtxtSalario.Size = new System.Drawing.Size(74, 20);
             this.mtxtSalario.TabIndex = 10;

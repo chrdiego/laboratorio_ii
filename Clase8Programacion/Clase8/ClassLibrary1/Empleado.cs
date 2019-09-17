@@ -25,7 +25,10 @@ namespace ClassLibrary1
 
     public static bool operator ==(Empleado e1, Empleado e2)
     {
-      return e1.legajo == e2.legajo;
+            if (e1.legajo == e2.legajo)
+                return true;
+            else
+                return false;
     }
 
     public static bool operator !=(Empleado e1, Empleado e2)

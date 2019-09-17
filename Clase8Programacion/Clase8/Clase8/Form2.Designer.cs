@@ -81,6 +81,7 @@
             // mtxtGanancias
             // 
             this.mtxtGanancias.Location = new System.Drawing.Point(163, 75);
+            this.mtxtGanancias.Mask = "$999999";
             this.mtxtGanancias.Name = "mtxtGanancias";
             this.mtxtGanancias.Size = new System.Drawing.Size(90, 20);
             this.mtxtGanancias.TabIndex = 5;
