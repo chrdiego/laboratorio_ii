@@ -36,7 +36,7 @@ namespace ClassLibrary1
     public string Mostrar(Empleado e1)
     {
       StringBuilder sb = new StringBuilder();
-      return sb.AppendFormat("NOMBRE: {0}\nAPELLIDO: {1}\nLEGAJO: {2}\nPUESTO: {3}\nSALARIO: {4}\n", e1.nombre, e1.apellido, e1.legajo, e1.puesto, e1.salario).ToString();
+      return sb.AppendFormat("NOMBRE: {0}\nAPELLIDO: {1}\nLEGAJO: {2}\nPUESTO: {3}\nSALARIO: {4}\n***************\n", e1.nombre, e1.apellido, e1.legajo, e1.puesto, e1.salario).ToString();
     }
 
     public enum EPuestoJerarquico
@@ -46,7 +46,5 @@ namespace ClassLibrary1
       SISTEMAS = 3,
       ACCIONISTA = 4,
     }
-
-
     }
 }

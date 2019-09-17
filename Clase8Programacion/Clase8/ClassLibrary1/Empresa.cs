@@ -13,6 +13,18 @@ namespace ClassLibrary1
     private string direccion;
     private float ganancias;
 
+    private Empresa(Empleado nomina)
+    {
+      this.nomina = nomina;
+    }
+
+    public Empresa(Empleado nomina, string razonSocial, string direccion, float ganancias) : this(nomina)
+    {
+      this.razonSocial = razonSocial;
+      this.direccion = direccion;
+      this.ganancias = ganancias;
+    }
+
 
   }
 }

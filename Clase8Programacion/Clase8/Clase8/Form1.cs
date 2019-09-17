@@ -36,14 +36,22 @@ namespace Clase8
     private void btnAgregarItem_Click(object sender, EventArgs e)
     {
       int legajo;
-      int i;
-      i = Enum.TryParse<Empleado.EPuestoJerarquico>(cmbPuesto.SelectedValue.ToString(), out i);
+      Empleado.EPuestoJerarquico puesto;
+      Enum.TryParse<Empleado.EPuestoJerarquico>(cmbPuesto.SelectedValue.ToString(), out puesto);
       if (int.TryParse(mtxtSalario.Text, out legajo) == false)
       {
         mtxtSalario.Text = "";
       }
 
-      Empleado nuevoEmpleado = new Empleado(txtNombre.Text, txtApellido.Text, mtxtLegajo.Text, , legajo);
+      Empleado nuevoEmpleado = new Empleado(txtNombre.Text, txtApellido.Text, mtxtLegajo.Text, puesto, legajo);
+      rtxtConsola.Text = nuevoEmpleado.Mostrar(nuevoEmpleado);
+      
+    }
+
+    private void btnEmpresa_Click(object sender, EventArgs e)
+    {
+      Form2 form = new Form2();
+      form.Show();
     }
   }
 }

@@ -133,6 +133,7 @@ namespace Clase8
             this.btnEmpresa.TabIndex = 11;
             this.btnEmpresa.Text = "Empresa";
             this.btnEmpresa.UseVisualStyleBackColor = true;
+            this.btnEmpresa.Click += new System.EventHandler(this.btnEmpresa_Click);
             // 
             // btnLimpiar
             // 
