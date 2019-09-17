@@ -13,6 +13,7 @@ namespace Clase8
 {
   public partial class Form1 : Form
   {
+        Empresa empresa;
     public Form1()
     {
       InitializeComponent();
@@ -44,13 +45,15 @@ namespace Clase8
       }
 
       Empleado nuevoEmpleado = new Empleado(txtNombre.Text, txtApellido.Text, mtxtLegajo.Text, puesto, legajo);
-      rtxtConsola.Text = nuevoEmpleado.Mostrar(nuevoEmpleado);
+            this.empresa += nuevoEmpleado;
+
+            rtxtConsola.Text = this.empresa.MostrarEmpresa();
       
     }
 
     private void btnEmpresa_Click(object sender, EventArgs e)
     {
-      Form2 form = new Form2();
+      Form2 form = new Form2(this.empresa);
       form.Show();
     }
   }
