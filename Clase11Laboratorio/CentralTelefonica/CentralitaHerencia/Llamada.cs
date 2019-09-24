@@ -58,7 +58,7 @@ namespace CentralitaHerencia
 
     public int OrdenarPorDuracion(Llamada llamada1, Llamada llamada2)
     {
-      return 0;
+      return llamada1.duracion.CompareTo(llamada2.duracion);
     }
     #endregion
 

@@ -33,7 +33,7 @@ namespace CentralitaHerencia
       
     }
 
-    public string Mostrar()
+    private string Mostrar()
     {
       StringBuilder sb = new StringBuilder();
       return sb.AppendFormat("").ToString();
@@ -43,6 +43,9 @@ namespace CentralitaHerencia
     {
 
     }
+
+ 
+
     #endregion
   }
 }

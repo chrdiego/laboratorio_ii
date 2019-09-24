@@ -14,7 +14,7 @@ namespace CentralitaHerencia
     {
       get
       {
-        return this.costo;
+        return this.CalcularCosto();
       }
     }
 
@@ -33,7 +33,14 @@ namespace CentralitaHerencia
 
     public string Mostrar()
     {
+      StringBuilder sb = new StringBuilder();
+      base.Mostrar();
+      return sb.AppendFormat(" COSTO DE LLAMADA: {0}", this.CostoLlamada).ToString();
+    }
 
+    private float CalcularCosto()
+    {
+      return this.costo * this.duracion;
     }
   }
 }

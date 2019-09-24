@@ -48,10 +48,5 @@ namespace CentralitaHerencia
 
     }
 
-    public string ToString()
-    {
-
-    }
-
   }
 }
