@@ -13,6 +13,14 @@ namespace CentralitaHerencia
 
     #region PROPIEDADES
 
+    public List<Llamada> Llamadas
+    {
+      get
+      {
+        return this.listaDeLlamadas;
+      }
+    }
+
     #endregion
     #region METODOS
     public Centralita()
@@ -22,7 +30,7 @@ namespace CentralitaHerencia
 
     private float CalcularGanancia(Llamada.TipoLlamada tipo)
     {
-
+      
     }
 
     public string Mostrar()
