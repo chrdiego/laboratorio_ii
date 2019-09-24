@@ -41,5 +41,12 @@ namespace Clase10
         this.cuil = value;
       }
     }
+
+    public string Mostrar()
+    {
+      StringBuilder sb = new StringBuilder();
+      sb.AppendFormat("CUIL: {0} - NOMBRE: {1}", this.nombre, this.cuil);
+      return sb.ToString();
+    }
     }
 }
