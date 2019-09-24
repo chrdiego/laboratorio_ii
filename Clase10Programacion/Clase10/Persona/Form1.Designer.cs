@@ -40,6 +40,8 @@ namespace Persona
             this.lblBono = new System.Windows.Forms.Label();
             this.lblObjetivo = new System.Windows.Forms.Label();
             this.txtObjetivo = new System.Windows.Forms.TextBox();
+            this.btnMostrar = new System.Windows.Forms.Button();
+            this.btnAumentar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cmbTipoEmpleado
@@ -83,7 +85,7 @@ namespace Persona
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(26, 12);
+            this.label1.Location = new System.Drawing.Point(18, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(28, 13);
             this.label1.TabIndex = 6;
@@ -92,7 +94,7 @@ namespace Persona
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(26, 53);
+            this.label2.Location = new System.Drawing.Point(18, 53);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 7;
@@ -101,7 +103,7 @@ namespace Persona
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(26, 92);
+            this.label3.Location = new System.Drawing.Point(18, 92);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(24, 13);
             this.label3.TabIndex = 8;
@@ -110,7 +112,7 @@ namespace Persona
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(26, 131);
+            this.label4.Location = new System.Drawing.Point(18, 131);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(40, 13);
             this.label4.TabIndex = 9;
@@ -119,7 +121,7 @@ namespace Persona
             // lblBono
             // 
             this.lblBono.AutoSize = true;
-            this.lblBono.Location = new System.Drawing.Point(26, 170);
+            this.lblBono.Location = new System.Drawing.Point(18, 171);
             this.lblBono.Name = "lblBono";
             this.lblBono.Size = new System.Drawing.Size(32, 13);
             this.lblBono.TabIndex = 10;
@@ -129,7 +131,7 @@ namespace Persona
             // lblObjetivo
             // 
             this.lblObjetivo.AutoSize = true;
-            this.lblObjetivo.Location = new System.Drawing.Point(176, 171);
+            this.lblObjetivo.Location = new System.Drawing.Point(239, 171);
             this.lblObjetivo.Name = "lblObjetivo";
             this.lblObjetivo.Size = new System.Drawing.Size(46, 13);
             this.lblObjetivo.TabIndex = 11;
@@ -138,17 +140,38 @@ namespace Persona
             // 
             // txtObjetivo
             // 
-            this.txtObjetivo.Location = new System.Drawing.Point(153, 187);
+            this.txtObjetivo.Location = new System.Drawing.Point(242, 187);
             this.txtObjetivo.Name = "txtObjetivo";
             this.txtObjetivo.Size = new System.Drawing.Size(106, 20);
             this.txtObjetivo.TabIndex = 12;
             this.txtObjetivo.Visible = false;
             // 
+            // btnMostrar
+            // 
+            this.btnMostrar.Location = new System.Drawing.Point(21, 228);
+            this.btnMostrar.Name = "btnMostrar";
+            this.btnMostrar.Size = new System.Drawing.Size(138, 48);
+            this.btnMostrar.TabIndex = 13;
+            this.btnMostrar.Text = "Mostrar";
+            this.btnMostrar.UseVisualStyleBackColor = true;
+            this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
+            // 
+            // btnAumentar
+            // 
+            this.btnAumentar.Location = new System.Drawing.Point(210, 228);
+            this.btnAumentar.Name = "btnAumentar";
+            this.btnAumentar.Size = new System.Drawing.Size(138, 48);
+            this.btnAumentar.TabIndex = 14;
+            this.btnAumentar.Text = "Aumentar";
+            this.btnAumentar.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(396, 450);
+            this.ClientSize = new System.Drawing.Size(396, 295);
+            this.Controls.Add(this.btnAumentar);
+            this.Controls.Add(this.btnMostrar);
             this.Controls.Add(this.txtObjetivo);
             this.Controls.Add(this.lblObjetivo);
             this.Controls.Add(this.lblBono);
@@ -185,6 +208,8 @@ namespace Persona
     private System.Windows.Forms.Label lblBono;
     private System.Windows.Forms.Label lblObjetivo;
     private System.Windows.Forms.TextBox txtObjetivo;
+    private System.Windows.Forms.Button btnMostrar;
+    private System.Windows.Forms.Button btnAumentar;
   }
 }
 
