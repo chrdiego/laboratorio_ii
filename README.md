@@ -1,4 +1,4 @@
-# Material hecho en casa y en clase de la materia Programación II y Laboratorio II
+# Material hecho en casa y en clase de las materias Programación II y Laboratorio II
 Clase 1: Introducción a C#. Creación de un proyecto y sus partes. Conceptos básicos: estructuras de control, variables.
 
 Clase 2: Introducción a Clases y Objetos: creación, definición e implementación de miembros de clases. Documentación de código.
