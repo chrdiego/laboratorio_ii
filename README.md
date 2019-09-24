@@ -19,3 +19,5 @@ Clase 9: Conceptos y uso de la herencia de clases. Llamados a constructores de l
 
 Clase 10: Redefinición de métodos. Abstract: métodos y clases.
 
+Clase 11: Comportamientos polimórficos en las clases.
+
