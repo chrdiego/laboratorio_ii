@@ -10,7 +10,7 @@ namespace CentralitaHerencia
   {
     public enum Franja
     {
-      Franja_1, Franja_2, Franja_3
+      Franja_1 = 0, Franja_2 = 1, Franja_3 = 2
     }
 
     private Franja franjaHoraria;
@@ -41,24 +41,28 @@ namespace CentralitaHerencia
       return costo;
     }
 
-    public bool Equals(object obj)
-    {
-
-    }
-
     private string Mostrar()
     {
-
+      base.Mostrar();
+      StringBuilder sb = new StringBuilder();
+      return sb.AppendFormat("COSTO: {0}\nFRANJA HORARIA: {1}", this.CostoLlamada, this.franjaHoraria).ToString();
     }
 
-    public Provincial(Franga miFranja, Llamada llamada)
+    public Provincial(Franja miFranja, Llamada llamada)
     {
-
+      this.duracion = llamada.Duracion;
+      this.nroDestino = llamada.NroDestino;
+      this.nroOrigen = llamada.NroOrigen;
+      this.franjaHoraria = miFranja;
+      
     }
 
-    public Provincial(string origen, Franja miFranja, float duracion, string destino)
+    public Provincial(string origen, Franja miFranja, float duracion, string destino) : base (duracion, destino, origen)
     {
-
+      this.nroOrigen = origen;
+      this.franjaHoraria = miFranja;
+      this.duracion = duracion;
+      this.nroDestino = destino;
     }
 
   }
