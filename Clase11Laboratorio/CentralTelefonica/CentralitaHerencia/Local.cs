@@ -18,11 +18,6 @@ namespace CentralitaHerencia
       }
     }
 
-    public Local(Llamada llamada, float costo)
-    {
-      
-    }
-
     public Local(string origen, float duracion, string destino, float costo) : base (duracion, destino, origen)
     {
       this.nroOrigen = NroOrigen;

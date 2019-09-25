@@ -30,7 +30,11 @@ namespace CentralitaHerencia
 
     private float CalcularGanancia(Llamada.TipoLlamada tipo)
     {
-      
+      switch(tipo)
+      {
+        case 0:
+          return
+      }
     }
 
     private string Mostrar()

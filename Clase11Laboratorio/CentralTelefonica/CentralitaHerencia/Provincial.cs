@@ -19,13 +19,24 @@ namespace CentralitaHerencia
     {
       get
       {
-        return CostoLlamada;
+        return this.CalcularCosto();
       }
     }
 
     private float CalcularCosto()
     {
-
+      switch(this.franjaHoraria)
+      {
+        case 0:
+          costo = this.Duracion * ;
+          break;
+        case 1:
+          return this.Duracion * 1,25;
+          break;
+        case 2:
+          return this.Duracion * 0,;
+          break;
+      }
     }
 
     public bool Equals(object obj)
