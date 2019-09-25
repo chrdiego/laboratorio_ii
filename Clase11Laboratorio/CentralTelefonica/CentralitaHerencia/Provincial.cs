@@ -25,18 +25,20 @@ namespace CentralitaHerencia
 
     private float CalcularCosto()
     {
+      float costo = 0;
       switch(this.franjaHoraria)
       {
         case 0:
-          costo = this.Duracion * ;
+          costo = this.Duracion * 0.99f;
           break;
         case 1:
-          return this.Duracion * 1,25;
+          costo = this.Duracion * 1.25f;
           break;
         case 2:
-          return this.Duracion * 0,;
+          costo = this.Duracion * 0.66f;
           break;
       }
+      return costo;
     }
 
     public bool Equals(object obj)
