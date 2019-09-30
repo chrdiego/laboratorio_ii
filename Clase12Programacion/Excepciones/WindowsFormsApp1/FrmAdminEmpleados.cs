@@ -1,4 +1,4 @@
-﻿using Entidades;
+using Entidades;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,11 +14,10 @@ namespace WindowsFormsApp1
     public partial class FrmAdminEmpleados : Form
     {
 
-        private List<Persona> personas;
+    public Persona persona;
         public FrmAdminEmpleados()
         {
             InitializeComponent();
-            this.personas = new List<Persona>();
         }
 
         private void FrmAdminEmpleados_Load(object sender, EventArgs e)
@@ -33,13 +32,13 @@ namespace WindowsFormsApp1
             switch ((ETipoEmpleado)this.cmbTipoEmpleado.SelectedItem)
             {
                 case ETipoEmpleado.Empleado:
-                    this.personas.Add(new Empleado(this.txtNombre.Text,int.Parse(this.txtCuil.Text ),float.Parse(this.txtSueldo.Text )));
+                    this.persona = new Empleado(this.txtNombre.Text,int.Parse(this.txtCuil.Text ),float.Parse(this.txtSueldo.Text ));
                     break;
                 case ETipoEmpleado.Jefe:
-                    this.personas.Add(new Jefe(this.txtNombre.Text, int.Parse(this.txtCuil.Text), float.Parse(this.txtSueldo.Text),int.Parse(this.txtBono.Text))); ;
+                    this.persona = new Jefe(this.txtNombre.Text, int.Parse(this.txtCuil.Text), float.Parse(this.txtSueldo.Text),int.Parse(this.txtBono.Text));
                     break;
                 case ETipoEmpleado.Vendedor:
-                    this.personas.Add(new Vendedor(this.txtNombre.Text, int.Parse(this.txtCuil.Text), float.Parse(this.txtSueldo.Text),int.Parse(this.txtObjetivo.Text)));
+                    this.persona = new Vendedor(this.txtNombre.Text, int.Parse(this.txtCuil.Text), float.Parse(this.txtSueldo.Text),int.Parse(this.txtObjetivo.Text));
                     break;
             }
 
@@ -71,19 +70,19 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void btnMostrar_Click(object sender, EventArgs e)
+       /* private void btnMostrar_Click(object sender, EventArgs e)
         {
             foreach (Persona item in this.personas)
             {
                 MessageBox.Show(item.Mostrar());                
 
             }
-        }
+        }*/
 
-        private void btnAumentar_Click(object sender, EventArgs e)
+       /* private void btnAumentar_Click(object sender, EventArgs e)
         {
             FrmAumentos frmAumentos = new FrmAumentos(this.personas);
             frmAumentos.Show();
-        }
+        }*/
     }
 }

@@ -31,6 +31,7 @@
             this.btnAumentar = new System.Windows.Forms.Button();
             this.txtPorcentaje = new System.Windows.Forms.TextBox();
             this.lstNomina = new System.Windows.Forms.ListBox();
+            this.btnAgregar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnAumentar
@@ -58,11 +59,22 @@
             this.lstNomina.Size = new System.Drawing.Size(386, 251);
             this.lstNomina.TabIndex = 3;
             // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Location = new System.Drawing.Point(349, 339);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregar.TabIndex = 4;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
             // FrmAumentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(436, 362);
+            this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.lstNomina);
             this.Controls.Add(this.txtPorcentaje);
             this.Controls.Add(this.btnAumentar);
@@ -78,5 +90,6 @@
         private System.Windows.Forms.Button btnAumentar;
         private System.Windows.Forms.TextBox txtPorcentaje;
         private System.Windows.Forms.ListBox lstNomina;
-    }
+    private System.Windows.Forms.Button btnAgregar;
+  }
 }

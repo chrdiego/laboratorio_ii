@@ -6,47 +6,20 @@ using System.Threading.Tasks;
 
 namespace Clase10
 {
-    public class Persona
+    public abstract class Persona
     {
-    private string nombre;
-    private int cuil;
-
-    public Persona()
+    public int Cuil { get; set; }
+    public string Nombre { get; set; }
+    public Persona(string nombre, int cuil)
     {
-      Persona p = new Persona();
+      this.Nombre = nombre;
+      this.Cuil = cuil;
     }
 
-    public Persona(string nombre, int cuil) : this()
+    public virtual string Mostrar()
     {
-      this.nombre = nombre;
-      this.cuil = cuil;
+      return "nom: " + this.Nombre + " cuil: " + this.Cuil;
+    }
     }
 
-    public string Nombre
-    {
-      get
-      {
-        return this.nombre;
-      }
-      set
-      {
-        this.nombre = value;
-      }
-    }
-
-    public int Cuil
-    {
-      set
-      {
-        this.cuil = value;
-      }
-    }
-
-    public string Mostrar()
-    {
-      StringBuilder sb = new StringBuilder();
-      sb.AppendFormat("CUIL: {0} - NOMBRE: {1}", this.nombre, this.cuil);
-      return sb.ToString();
-    }
-    }
 }

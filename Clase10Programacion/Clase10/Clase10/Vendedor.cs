@@ -8,12 +8,18 @@ namespace Clase10
 {
   class Vendedor : Empleado
   {
-    private int Objetivo { get; set; }
+    public int Objetivo { get; set; }
 
-    public Vendedor(string nombre, int cuil, float sueldo, int objetivo)
+    public Vendedor(string nombre, int cuil, float sueldo, int objetivo) : base (nombre, cuil, sueldo)
     {
       this.Objetivo = objetivo;
     }
+
+    public override string Mostrar()
+    {
+      return base.Mostrar() + " obj: " this.Objetivo;
+    }
+
 
   }
 }

@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApp1
+namespace WindowsFormsApp1
 {
     partial class FrmAdminEmpleados
     {
@@ -155,9 +155,7 @@
             this.btnMostrar.Size = new System.Drawing.Size(75, 33);
             this.btnMostrar.TabIndex = 12;
             this.btnMostrar.Text = "Mostrar";
-            this.btnMostrar.UseVisualStyleBackColor = true;
-            this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
-            // 
+            this.btnMostrar.UseVisualStyleBackColor = true;            // 
             // btnAumentar
             // 
             this.btnAumentar.Location = new System.Drawing.Point(191, 19);
@@ -166,7 +164,6 @@
             this.btnAumentar.TabIndex = 13;
             this.btnAumentar.Text = "Aumentar";
             this.btnAumentar.UseVisualStyleBackColor = true;
-            this.btnAumentar.Click += new System.EventHandler(this.btnAumentar_Click);
             // 
             // FrmAdminEmpleados
             // 
