@@ -27,13 +27,9 @@ namespace Entidades
             }
         }
 
-
-        public new string Mostrar()
+        public override string Mostrar()
         {
-            StringBuilder retorno = new StringBuilder();
-            retorno.AppendLine(base.Mostrar());
-            retorno.AppendLine("Años de Exp: " + AñosDeExperiencia);
-            return retorno.ToString();
+            return base.Mostrar() + "\nAños experiencia: " + this.AñosDeExperiencia;
         }
 
 
