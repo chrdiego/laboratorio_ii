@@ -103,31 +103,22 @@ namespace Entidades
         }
 
 
-        public static Equipo operator +(Equipo e1, Jugador j)
+        public static Equipo operator +(Equipo e, Jugador j)
         {
-            Equipo retorno = e1;
-            bool flag = false;
-            int contador = 0;
-
-            if (!(e1 is null) && !(j is null))
+            int cont = 0;
+            if (e != j)
             {
-                flag = true;
-                foreach (Jugador m in e1.jugadores)
+                foreach (Jugador aux in e.jugadores)
                 {
-                    contador++;
-                    if (m == j)
-                    {
-                        flag = false;
-                        break;
-                    }
+                    cont++;
                 }
-                if (flag == true && e1.cantidadMaximaDeJugadores > contador && j.ValidarAptitud() == true)
+                if (cont < e.cantidadMaximaDeJugadores && j.ValidarAptitud())
                 {
-                    e1.jugadores.Add(j);
+                    e.jugadores.Add(j);
+                    return e;
                 }
             }
-
-            return retorno;
+            return e;
         }
 
 

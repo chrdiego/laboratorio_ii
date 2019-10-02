@@ -44,14 +44,9 @@ namespace Entidades
         }
 
 
-        public new string Mostrar()
+        public override string Mostrar()
         {
-            StringBuilder retorno = new StringBuilder();
-            retorno.AppendLine(base.Mostrar());
-            retorno.AppendLine("Altura: " + Altura);
-            retorno.AppendLine("Peso: " + Peso);
-            retorno.AppendLine("Posicion: " + Posicion);
-            return retorno.ToString();
+            return base.Mostrar() + "Altura: " + this.Altura + "\nPeso: " + this.Peso + "\nPosicion: " + this.Posicion + "\n";
         }
 
         public bool ValidarEstadoFisico()
