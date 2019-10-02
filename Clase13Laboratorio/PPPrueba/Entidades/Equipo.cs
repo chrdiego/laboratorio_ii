@@ -84,25 +84,22 @@ namespace Entidades
         }
 
 
-        public static bool operator ==(Equipo e1, Jugador j)
+        public static bool operator ==(Equipo e, Jugador j)
         {
-            bool retorno = false;
-            if (!(e1 is null) && !(j is null))
+            foreach (Jugador a in e.jugadores)
             {
-                foreach (Jugador d in e1.jugadores)
+                if (!object.ReferenceEquals(a, null))
                 {
-                    if (d.Dni == j.Dni)
-                    {
-                        retorno = true;
-                    }
+                    if (a == j)
+                        return true;
                 }
             }
-            return retorno;
+            return false;
         }
 
-        public static bool operator !=(Equipo e1, Jugador j)
+        public static bool operator !=(Equipo e, Jugador j)
         {
-            return !(e1 == j);
+            return !(e == j);
         }
 
 
