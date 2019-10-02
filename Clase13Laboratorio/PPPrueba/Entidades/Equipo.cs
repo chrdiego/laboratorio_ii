@@ -28,9 +28,7 @@ namespace Entidades
             set
             {
                 if (value.ValidarAptitud() == true)
-                {
                     this.directorTecnico = value;
-                }
             }
         }
 
