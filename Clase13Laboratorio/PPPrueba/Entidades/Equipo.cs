@@ -97,9 +97,29 @@ namespace Entidades
 
         public bool ValidarEquipo(Equipo e)
         {
+            int auxArquero = 0;
+            int auxDelantero = 0;
+            int auxCentral = 0;
+            int auxDefensor = 0;
+            int contador = 0;
             if(e.directorTecnico != null)
             {
-                if()
+                foreach(Jugador j in e.jugadores)
+                {
+                    if (j.Posicion == Posicion.Arquero)
+                        auxArquero++;
+                    if (j.Posicion == Posicion.Defensor)
+                        auxDefensor++;
+                    if (j.Posicion == Posicion.Central)
+                        auxCentral++;
+                    if (j.Posicion == Posicion.Delantero)
+                        auxDelantero++;
+                    contador++;
+                }
+                if (auxArquero == 1 && auxDelantero >= 1 && auxDefensor >= 1 && auxCentral >= 1 && contador == this.cantidadMaximaJugadores)
+                    return true;
+                else
+                    return false;
             }
             return false;
         }

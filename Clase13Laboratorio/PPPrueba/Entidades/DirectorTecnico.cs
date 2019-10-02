@@ -23,7 +23,7 @@ namespace Entidades
         }
         #endregion
 
-        public DirectorTecnico(string nombre, string apellido, int dni, int edad, int añosExperiencia)
+        public DirectorTecnico(string nombre, string apellido, int dni, int edad, int añosExperiencia) : base (nombre, apellido, edad, dni)
         {
             this.AñosExperiencia = añosExperiencia;
         }

@@ -38,7 +38,7 @@ namespace Entidades
         }
         #endregion
 
-        public Jugador(string nombre, string apellido, int edad, int dni, float peso, float altura, Posicion posicion)
+        public Jugador(string nombre, string apellido, int edad, int dni, float peso, float altura, Posicion posicion) : base (nombre, apellido, edad, dni)
         {
             this.peso = this.Peso;
             this.altura = this.Altura;

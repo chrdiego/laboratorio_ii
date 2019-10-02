@@ -15,8 +15,6 @@ namespace Entidades
 
         #region propiedades
 
-
-
         public string Nombre
         {
             get
@@ -52,6 +50,15 @@ namespace Entidades
         #endregion
 
 #region metodos
+
+        public Persona(string nombre, string apellido, int edad, int dni)
+        {
+            this.nombre = nombre;
+            this.apellido = apellido;
+            this.edad = edad;
+            this.dni = dni;
+        }
+
         public virtual string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
