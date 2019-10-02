@@ -45,50 +45,31 @@ namespace Entidades
 
         public static bool ValidarEquipo(Equipo e)
         {
-            bool retorno = false;
-            int flagArq = 0;
-            int flagDef = 0;
-            int flagDel = 0;
-            int flagCen = 0;
+            int auxArquero = 0;
+            int auxDelantero = 0;
+            int auxCentral = 0;
+            int auxDefensor = 0;
             int contador = 0;
-
-            if (!(e is null))
+            if (e.directorTecnico != null)
             {
-                if (!(e.directorTecnico is null))
+                foreach (Jugador j in e.jugadores)
                 {
-                    foreach (Jugador j in e.jugadores)
-                    {
-                        contador++;
-                        if (j.Posicion == Posicion.Arquero)
-                        {
-                            if (flagArq == 1)
-                            {
-                                flagArq = 0;
-                                break;
-                            }
-                            flagArq = 1;
-                        }
-                        else if (j.Posicion == Posicion.Defensor)
-                        {
-                            flagDef = 1;
-                        }
-                        else if (j.Posicion == Posicion.Central)
-                        {
-                            flagCen = 1;
-                        }
-                        else if (j.Posicion == Posicion.Delantero)
-                        {
-                            flagDel = 1;
-                        }
-                    }
+                    if (j.Posicion == Posicion.Arquero)
+                        auxArquero++;
+                    if (j.Posicion == Posicion.Defensor)
+                        auxDefensor++;
+                    if (j.Posicion == Posicion.Central)
+                        auxCentral++;
+                    if (j.Posicion == Posicion.Delantero)
+                        auxDelantero++;
+                    contador++;
                 }
-
-                if (flagArq == 1 && flagDef == 1 && flagCen == 1 && flagDel == 1 && contador == 6)
-                {
-                    retorno = true;
-                }
+                if (auxArquero == 1 && auxDelantero >= 1 && auxDefensor >= 1 && auxCentral >= 1 && contador == 6)
+                    return true;
+                else
+                    return false;
             }
-            return retorno;
+            return false;
         }
 
 
