@@ -95,7 +95,7 @@ namespace Entidades
             return false;
         }
 
-        public bool ValidarEquipo(Equipo e)
+        public static bool ValidarEquipo(Equipo e)
         {
             int auxArquero = 0;
             int auxDelantero = 0;
@@ -116,7 +116,7 @@ namespace Entidades
                         auxDelantero++;
                     contador++;
                 }
-                if (auxArquero == 1 && auxDelantero >= 1 && auxDefensor >= 1 && auxCentral >= 1 && contador == this.cantidadMaximaJugadores)
+                if (auxArquero == 1 && auxDelantero >= 1 && auxDefensor >= 1 && auxCentral >= 1 && contador == 6)
                     return true;
                 else
                     return false;
