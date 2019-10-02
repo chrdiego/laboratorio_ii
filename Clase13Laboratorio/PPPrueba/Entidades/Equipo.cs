@@ -8,19 +8,29 @@ namespace Entidades
 {
     public class Equipo
     {
-        private int cantidadMaximaJugadores = 6;
-        private DirectorTecnico directorTecnico;
-        private List<Jugador> jugadores;
-        private string nombre;
-        #region propiedade
+        protected int cantidadMaximaDeJugadores = 6;
+        protected DirectorTecnico directorTecnico;
+        protected List<Jugador> jugadores;
+        protected string nombre;
+
+        private Equipo()
+        {
+            this.jugadores = new List<Jugador>();
+        }
+        public Equipo(string nombre) : this()
+        {
+            this.nombre = nombre;
+        }
+
+
         public DirectorTecnico DirectorTecnico
         {
             set
             {
-                if (value.ValidarAptitud())
+                if (value.ValidarAptitud() == true)
+                {
                     this.directorTecnico = value;
-                else
-                    this.directorTecnico = null;
+                }
             }
         }
 
@@ -31,98 +41,138 @@ namespace Entidades
                 return this.nombre;
             }
         }
-        #endregion
 
-        private Equipo()
-        {
-            this.jugadores = new List<Jugador>();
-        }
-
-        public Equipo(string nombre)
-        {
-            this.nombre = nombre;
-        }
-
-        public static explicit operator string(Equipo e)
-        {
-            StringBuilder sb = new StringBuilder();
-            if (e.directorTecnico == null)
-                return "\nDT Inválido\n";
-            else
-            {
-                foreach(Jugador j in e.jugadores)
-                {
-                    sb.AppendLine(j.Mostrar());
-                }
-            }
-            sb.AppendLine("DT: " + e.directorTecnico.Nombre);
-            return sb.ToString();
-        }
-
-        public static bool operator ==(Equipo e, Jugador j)
-        {
-            foreach(Jugador a in e.jugadores)
-            {
-                if(!object.ReferenceEquals(a,null))
-                {
-                    if (a == j)
-                        return true;
-                }
-            }
-            return false;
-        }
-
-        public static bool operator !=(Equipo e, Jugador j)
-        {
-            return !(e == j);
-        }
-
-        public static bool operator +(Equipo e, Jugador j)
-        {
-            int cont = 0;
-            if(e != j)
-            {
-                foreach(Jugador aux in e.jugadores)
-                {
-                    cont++;
-                }
-                if (cont < e.cantidadMaximaJugadores && j.ValidarAptitud())
-                {
-                    e.jugadores.Add(j);
-                    return true;
-                }
-            }
-            return false;
-        }
 
         public static bool ValidarEquipo(Equipo e)
         {
-            int auxArquero = 0;
-            int auxDelantero = 0;
-            int auxCentral = 0;
-            int auxDefensor = 0;
+            bool retorno = false;
+            int flagArq = 0;
+            int flagDef = 0;
+            int flagDel = 0;
+            int flagCen = 0;
             int contador = 0;
-            if(e.directorTecnico != null)
+
+            if (!(e is null))
             {
-                foreach(Jugador j in e.jugadores)
+                if (!(e.directorTecnico is null))
                 {
-                    if (j.Posicion == Posicion.Arquero)
-                        auxArquero++;
-                    if (j.Posicion == Posicion.Defensor)
-                        auxDefensor++;
-                    if (j.Posicion == Posicion.Central)
-                        auxCentral++;
-                    if (j.Posicion == Posicion.Delantero)
-                        auxDelantero++;
-                    contador++;
+                    foreach (Jugador j in e.jugadores)
+                    {
+                        contador++;
+                        if (j.Posicion == Posicion.Arquero)
+                        {
+                            if (flagArq == 1)
+                            {
+                                flagArq = 0;
+                                break;
+                            }
+                            flagArq = 1;
+                        }
+                        else if (j.Posicion == Posicion.Defensor)
+                        {
+                            flagDef = 1;
+                        }
+                        else if (j.Posicion == Posicion.Central)
+                        {
+                            flagCen = 1;
+                        }
+                        else if (j.Posicion == Posicion.Delantero)
+                        {
+                            flagDel = 1;
+                        }
+                    }
                 }
-                if (auxArquero == 1 && auxDelantero >= 1 && auxDefensor >= 1 && auxCentral >= 1 && contador == 6)
-                    return true;
-                else
-                    return false;
+
+                if (flagArq == 1 && flagDef == 1 && flagCen == 1 && flagDel == 1 && contador == 6)
+                {
+                    retorno = true;
+                }
             }
-            return false;
+            return retorno;
         }
-        
+
+
+        public static explicit operator string(Equipo e)
+        {
+            string retorno = "";
+            if (!(e is null))
+            {
+                retorno = e.Mostrar();
+            }
+            return retorno;
+        }
+
+
+        public static bool operator ==(Equipo e1, Jugador j)
+        {
+            bool retorno = false;
+            if (!(e1 is null) && !(j is null))
+            {
+                foreach (Jugador d in e1.jugadores)
+                {
+                    if (d.Dni == j.Dni)
+                    {
+                        retorno = true;
+                    }
+                }
+            }
+            return retorno;
+        }
+
+        public static bool operator !=(Equipo e1, Jugador j)
+        {
+            return !(e1 == j);
+        }
+
+
+        public static Equipo operator +(Equipo e1, Jugador j)
+        {
+            Equipo retorno = e1;
+            bool flag = false;
+            int contador = 0;
+
+            if (!(e1 is null) && !(j is null))
+            {
+                flag = true;
+                foreach (Jugador m in e1.jugadores)
+                {
+                    contador++;
+                    if (m == j)
+                    {
+                        flag = false;
+                        break;
+                    }
+                }
+                if (flag == true && e1.cantidadMaximaDeJugadores > contador && j.ValidarAptitud() == true)
+                {
+                    e1.jugadores.Add(j);
+                }
+            }
+
+            return retorno;
+        }
+
+
+        public string Mostrar()
+        {
+            StringBuilder retorno = new StringBuilder();
+
+            if (directorTecnico is null)
+            {
+                retorno.AppendLine("Equipo sin DT");
+            }
+            else
+            {
+                retorno.AppendLine("DT: " + this.directorTecnico.Nombre);
+            }
+
+
+            foreach (Jugador j in this.jugadores)
+            {
+                retorno.AppendLine(j.Mostrar());
+            }
+
+            return retorno.ToString();
+        }
     }
 }

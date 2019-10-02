@@ -66,10 +66,8 @@ namespace Entidades
             return sb.ToString();
         }
 
-        public bool ValidarAptitud()
-        {
-            return true;
-        }
+        public abstract bool ValidarAptitud();
+
 #endregion
     }
 }

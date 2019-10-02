@@ -8,40 +8,43 @@ namespace Entidades
 {
     public class DirectorTecnico : Persona
     {
-        private int añosExperiencia;
-        #region propiedades
-        public int AñosExperiencia
+        protected int añosDeExperiencia;
+        public DirectorTecnico(string nombre, string apellido, int edad, int dni, int añosDeExperiencia) : base(nombre, apellido, edad, dni)
+        {
+            this.añosDeExperiencia = añosDeExperiencia;
+        }
+
+        protected int AñosDeExperiencia
         {
             get
             {
-                return this.añosExperiencia;
+                return this.añosDeExperiencia;
             }
+
             set
             {
-                this.añosExperiencia = value;
+                this.añosDeExperiencia = value;
             }
         }
-        #endregion
 
-        public DirectorTecnico(string nombre, string apellido, int dni, int edad, int añosExperiencia) : base (nombre, apellido, edad, dni)
-        {
-            this.AñosExperiencia = añosExperiencia;
-        }
 
-        public override string Mostrar()
+        public new string Mostrar()
         {
-            return base.Mostrar() + "\nAños experiencia: " + this.AñosExperiencia;
-        }
-
-        public new bool ValidarAptitud()
-        {
-            if (this.Edad <= 65 && this.AñosExperiencia >= 2)
-                return true;
-            else
-                return false;
+            StringBuilder retorno = new StringBuilder();
+            retorno.AppendLine(base.Mostrar());
+            retorno.AppendLine("Años de Exp: " + AñosDeExperiencia);
+            return retorno.ToString();
         }
 
 
-
+        public override bool ValidarAptitud()
+        {
+            bool retorno = false;
+            if (Edad < 65 && AñosDeExperiencia >= 2)
+            {
+                retorno = true;
+            }
+            return retorno;
+        }
     }
 }
