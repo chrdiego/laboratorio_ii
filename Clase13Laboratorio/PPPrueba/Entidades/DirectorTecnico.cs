@@ -39,12 +39,10 @@ namespace Entidades
 
         public override bool ValidarAptitud()
         {
-            bool retorno = false;
             if (Edad < 65 && AñosDeExperiencia >= 2)
-            {
-                retorno = true;
-            }
-            return retorno;
+                return true;
+            else
+                return false;
         }
     }
 }
