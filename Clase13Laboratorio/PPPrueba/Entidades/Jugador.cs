@@ -51,24 +51,20 @@ namespace Entidades
 
         public bool ValidarEstadoFisico()
         {
-            bool retorno = false;
             float imc = (Peso / (float)(Math.Pow(Altura, 2)));
             if (imc > 18.5 && imc < 25)
-            {
-                retorno = true;
-            }
-            return retorno;
+                return true;
+            else
+                return false;
         }
 
 
         public override bool ValidarAptitud()
         {
-            bool retorno = false;
             if (ValidarEstadoFisico() == true && Edad < 40)
-            {
-                retorno = true;
-            }
-            return retorno;
+                return true;
+            else
+                return false;
         }
     }
 }

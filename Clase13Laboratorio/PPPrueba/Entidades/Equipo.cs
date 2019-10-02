@@ -75,12 +75,24 @@ namespace Entidades
 
         public static explicit operator string(Equipo e)
         {
-            string retorno = "";
-            if (!(e is null))
+            StringBuilder sb = new StringBuilder();
+            if (e.directorTecnico == null)
             {
-                retorno = e.Mostrar();
+                sb.AppendLine("\tDT INVÁLIDO\n");
+                foreach (Jugador j in e.jugadores)
+                {
+                    sb.AppendLine(j.Mostrar());
+                }
             }
-            return retorno;
+            else
+            {
+                sb.AppendLine("DT: " + e.directorTecnico.Nombre + "\n");
+                foreach (Jugador j in e.jugadores)
+                {
+                    sb.AppendLine(j.Mostrar());
+                }
+            }
+            return sb.ToString();
         }
 
 
@@ -119,29 +131,6 @@ namespace Entidades
                 }
             }
             return e;
-        }
-
-
-        public string Mostrar()
-        {
-            StringBuilder retorno = new StringBuilder();
-
-            if (directorTecnico is null)
-            {
-                retorno.AppendLine("Equipo sin DT");
-            }
-            else
-            {
-                retorno.AppendLine("DT: " + this.directorTecnico.Nombre);
-            }
-
-
-            foreach (Jugador j in this.jugadores)
-            {
-                retorno.AppendLine(j.Mostrar());
-            }
-
-            return retorno.ToString();
         }
     }
 }
