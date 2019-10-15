@@ -21,6 +21,30 @@ namespace CentralitaHerencia
       }
     }
 
+    public float GananciaPorLocal
+    {
+      get
+      {
+        return this.CalcularGanancia(Llamada.TipoLlamada.Local);
+      }
+    }
+
+    public float GananciaPorTotal
+    {
+      get
+      {
+        return this.CalcularGanancia(Llamada.TipoLlamada.Todas);
+      }
+    }
+
+    public float GananciaPorProvincial
+    {
+      get
+      {
+        return this.CalcularGanancia(Llamada.TipoLlamada.Provincial);
+      }
+    }
+
     #endregion
     #region METODOS
     public Centralita()
@@ -28,28 +52,39 @@ namespace CentralitaHerencia
       listaDeLlamadas = new List<Llamada>();
     }
 
-    private float CalcularGanancia(Llamada.TipoLlamada tipo)
+    public Centralita(string nombreEmpresa)
     {
-      switch(tipo)
-      {
-        case 0:
-          return
-      }
+      this.razonSocial = nombreEmpresa;
     }
 
-    private string Mostrar()
+    private float CalcularGanancia(Llamada.TipoLlamada tipo)
+    {
+      float ganancia = 0;
+      switch(tipo)
+      {
+        case (Llamada.TipoLlamada)0:
+          ganancia = 5;
+          break;
+        case (Llamada.TipoLlamada)1:
+          ganancia = 6;
+          break;
+        case (Llamada.TipoLlamada)2:
+          ganancia = 7;
+          break;
+      }
+      return ganancia;
+    }
+
+    public string Mostrar()
     {
       StringBuilder sb = new StringBuilder();
-      return sb.AppendFormat("").ToString();
+      return sb.Append("Razon social: " + this.razonSocial + "\nGanancia total: ").ToString();
     }
 
     public void OrdenarLlamadas()
     {
-
+      this.Llamadas.Sort();
     }
-
- 
-
     #endregion
   }
 }

@@ -10,7 +10,6 @@ namespace CentralitaHerencia
   {
     static void Main(string[] args)
     {
-        
     }
   }
 }

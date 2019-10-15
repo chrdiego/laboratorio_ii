@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CentralitaHerencia
 {
-  class Provincial : Llamada
+  public class Provincial : Llamada
   {
     public enum Franja
     {
@@ -28,33 +28,24 @@ namespace CentralitaHerencia
       float costo = 0;
       switch(this.franjaHoraria)
       {
-        case 0:
+        case (Franja)0:
           costo = this.Duracion * 0.99f;
           break;
-        case 1:
+        case (Franja)1:
           costo = this.Duracion * 1.25f;
           break;
-        case 2:
+        case (Franja)2:
           costo = this.Duracion * 0.66f;
           break;
       }
       return costo;
     }
 
-    private string Mostrar()
+    public override string Mostrar()
     {
       base.Mostrar();
       StringBuilder sb = new StringBuilder();
       return sb.AppendFormat("COSTO: {0}\nFRANJA HORARIA: {1}", this.CostoLlamada, this.franjaHoraria).ToString();
-    }
-
-    public Provincial(Franja miFranja, Llamada llamada)
-    {
-      this.duracion = llamada.Duracion;
-      this.nroDestino = llamada.NroDestino;
-      this.nroOrigen = llamada.NroOrigen;
-      this.franjaHoraria = miFranja;
-      
     }
 
     public Provincial(string origen, Franja miFranja, float duracion, string destino) : base (duracion, destino, origen)
@@ -63,6 +54,14 @@ namespace CentralitaHerencia
       this.franjaHoraria = miFranja;
       this.duracion = duracion;
       this.nroDestino = destino;
+    }
+
+    public Provincial(Franja miFranja, Llamada llamada)
+    {
+      this.franjaHoraria = miFranja;
+      this.duracion = llamada.Duracion;
+      this.nroDestino = llamada.NroDestino;
+      this.nroOrigen = llamada.NroOrigen;
     }
 
   }

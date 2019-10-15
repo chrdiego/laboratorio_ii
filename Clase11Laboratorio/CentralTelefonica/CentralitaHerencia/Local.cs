@@ -26,7 +26,7 @@ namespace CentralitaHerencia
       this.costo = CostoLlamada;
     }
 
-    public string Mostrar()
+    public override string Mostrar()
     {
       StringBuilder sb = new StringBuilder();
       base.Mostrar();
