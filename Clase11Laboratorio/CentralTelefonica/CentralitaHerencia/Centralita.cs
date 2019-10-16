@@ -85,7 +85,7 @@ namespace CentralitaHerencia
 
     public void OrdenarLlamadas()
     {
-      this.Llamadas.Sort();
+      this.Llamadas.Sort(Llamada.OrdenarPorDuracion);
     }
     #endregion
   }

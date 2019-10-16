@@ -56,7 +56,7 @@ namespace CentralitaHerencia
       return sb.AppendFormat("DURACION DE LA LLAMADA: {0}\nNUMERO DESTINO: {1}\nNUMERO ORIGEN: {2}",this.duracion,this.nroDestino,this.nroOrigen).ToString();
     }
 
-    public int OrdenarPorDuracion(Llamada llamada1, Llamada llamada2)
+    public static int OrdenarPorDuracion(Llamada llamada1, Llamada llamada2)
     {
       return llamada1.Duracion.CompareTo(llamada2.Duracion);
     }
