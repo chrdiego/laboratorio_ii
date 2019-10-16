@@ -8,6 +8,7 @@ namespace CentralitaHerencia
 {
   public class Centralita
   {
+
     private List<Llamada> listaDeLlamadas;
     string razonSocial;
 
@@ -47,6 +48,7 @@ namespace CentralitaHerencia
 
     #endregion
     #region METODOS
+
     public Centralita()
     {
       this.listaDeLlamadas = new List<Llamada>();
