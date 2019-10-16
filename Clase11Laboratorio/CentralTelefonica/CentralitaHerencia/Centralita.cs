@@ -54,7 +54,7 @@ namespace CentralitaHerencia
       this.listaDeLlamadas = new List<Llamada>();
     }
 
-    public Centralita(string nombreEmpresa)
+    public Centralita(string nombreEmpresa) : this ()
     {
       this.razonSocial = nombreEmpresa;
     }
