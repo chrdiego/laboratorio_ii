@@ -50,19 +50,11 @@ namespace CentralitaHerencia
 
     public Provincial(string origen, Franja miFranja, float duracion, string destino) : base (duracion, destino, origen)
     {
-      this.nroOrigen = origen;
       this.franjaHoraria = miFranja;
-      this.duracion = duracion;
-      this.nroDestino = destino;
     }
 
-    public Provincial(Franja miFranja, Llamada llamada)
+    public Provincial(Franja miFranja, Llamada llamada) : base (llamada.Duracion, llamada.NroDestino, llamada.NroOrigen)
     {
-      this.franjaHoraria = miFranja;
-      this.duracion = llamada.Duracion;
-      this.nroDestino = llamada.NroDestino;
-      this.nroOrigen = llamada.NroOrigen;
     }
-
   }
 }
