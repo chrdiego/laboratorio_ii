@@ -65,13 +65,41 @@ namespace CentralitaHerencia
       switch(tipo)
       {
         case (Llamada.TipoLlamada)0:
-          ganancia = 5;
+            foreach(Llamada llamada in Llamadas)
+                    {
+                        if(llamada is Local)
+                        {
+                            Local local = (Local)llamada;
+                            ganancia += local.CostoLlamada;
+                        }
+                    }
           break;
         case (Llamada.TipoLlamada)1:
-          ganancia = 6;
+                    foreach(Llamada llamada in Llamadas)
+                    {
+                        if(llamada is Provincial)
+                            {
+                            Provincial provincial = (Provincial)llamada;
+                            ganancia += provincial.CostoLlamada;
+                            }
+                    }
           break;
         case (Llamada.TipoLlamada)2:
-          ganancia = 7;
+                    {
+                        foreach(Llamada llamada in Llamadas)
+                        {
+                            if(llamada is Local)
+                            {
+                                Local local = (Local)llamada;
+                                ganancia += local.CostoLlamada;
+                            }
+                            else if(llamada is Provincial)
+                            {
+                                Provincial provincial = (Provincial)llamada;
+                                ganancia += provincial.CostoLlamada;
+                            }
+                        }
+                    }
           break;
       }
       return ganancia;
@@ -80,7 +108,15 @@ namespace CentralitaHerencia
     public string Mostrar()
     {
       StringBuilder sb = new StringBuilder();
-      return sb.Append("Razon social: " + this.razonSocial + "\nGanancia total: ").ToString();
+      sb.Append("Razon social: " + this.razonSocial + "\nGanancia total: " + GananciaPorTotal.ToString() + "\nGanancia local: " + GananciaPorLocal.ToString() + "\nGanancia provincial: " + GananciaPorProvincial.ToString() + "\n").ToString();
+      foreach(Llamada llamada in this.Llamadas)
+            {
+                sb.AppendLine("Detalles: ");
+                sb.Append(llamada.Mostrar());
+                sb.AppendLine("------------------------\n");
+            }
+      sb.AppendLine("***********************************");
+      return sb.ToString();
     }
 
     public void OrdenarLlamadas()

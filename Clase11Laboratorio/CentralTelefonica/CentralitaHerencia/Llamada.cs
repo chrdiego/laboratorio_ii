@@ -53,7 +53,7 @@ namespace CentralitaHerencia
     public virtual string Mostrar()
     {
       StringBuilder sb = new StringBuilder();
-      return sb.AppendFormat("DURACION DE LA LLAMADA: {0}\nNUMERO DESTINO: {1}\nNUMERO ORIGEN: {2}",this.duracion,this.nroDestino,this.nroOrigen).ToString();
+      return sb.AppendFormat("DURACION DE LA LLAMADA: {0}\nNUMERO DESTINO: {1}\nNUMERO ORIGEN: {2}\n",this.duracion,this.nroDestino,this.nroOrigen).ToString();
     }
 
     public static int OrdenarPorDuracion(Llamada llamada1, Llamada llamada2)

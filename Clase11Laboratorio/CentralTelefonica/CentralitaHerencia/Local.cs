@@ -20,17 +20,15 @@ namespace CentralitaHerencia
 
     public Local(string origen, float duracion, string destino, float costo) : base (duracion, destino, origen)
     {
-      this.nroOrigen = NroOrigen;
-      this.duracion = Duracion;
-      this.nroDestino = NroDestino;
-      this.costo = CostoLlamada;
+      this.costo = costo;
     }
 
     public override string Mostrar()
     {
       StringBuilder sb = new StringBuilder();
-      base.Mostrar();
-      return sb.AppendFormat(" COSTO DE LLAMADA: {0}", this.CostoLlamada).ToString();
+      sb.AppendFormat("COSTO DE LLAMADA: {0}\n", this.CostoLlamada).ToString();
+      sb.AppendLine(base.Mostrar());
+      return sb.ToString();
     }
 
     private float CalcularCosto()
