@@ -17,7 +17,7 @@ namespace Test
       DateTime d1 = new DateTime(1);
       DateTime d2 = new DateTime(2);
 
-      Producto alimento1 = new Alimenticio(5, "Verdura", d1);
+      Alimenticio alimento1 = new Alimenticio(5, "Verdura", d1);
       Alimenticio alimento2 = new Alimenticio(6, "Bebida", d2);
       Alimenticio alimento3 = new Alimenticio(7, "Snack", d1);
       Alimenticio alimento4 = new Alimenticio(8, "Carne", d1);
@@ -32,9 +32,7 @@ namespace Test
 
       Console.WriteLine("ESTANTE 1: ");
       if (est1 + alimento1)
-      {
         Console.WriteLine("Alimento 1 ha sido agregado (Verdura");
-      }
       else
         Console.WriteLine("No pudo agregarse");
 

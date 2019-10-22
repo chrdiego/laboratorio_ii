@@ -19,6 +19,14 @@ namespace Entidades
       //this.productos = new List<T>();
     }
 
+    public int Tamaño
+    {
+      get
+      {
+        return this.tamaño;
+      }
+    }
+
 
     public static bool operator +(Estanteria<T> estanteria, Producto producto)
     {
@@ -26,12 +34,23 @@ namespace Entidades
       int contador = 0;
       if(estanteria != null && producto != null)
       {
+        for(int i = 0; i < estanteria.Tamaño; i++)
+        {
+          if(producto == estanteria.productos[i])
+            flag = false;
+          contador++;
+          break;
+        }
+        if (flag == false && contador < estanteria.Tamaño)
+        {
+          estanteria.productos[contador] = (T)producto;
+          return true;
+        }
+        /*
         foreach(Producto a in estanteria.productos)
         {
           if(a.Id_prod == producto.Id_prod)
-          {
             flag = true;
-          }
           contador++;
           if (flag == false && contador < estanteria.tamaño)
           {
@@ -40,7 +59,8 @@ namespace Entidades
             return true;
           }
         }
-      }
+      }*/
+    }
       return false;
     }
 
@@ -65,6 +85,5 @@ namespace Entidades
       }
       return false;
     }
-
   }
 }
