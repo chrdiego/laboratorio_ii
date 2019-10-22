@@ -37,9 +37,11 @@ namespace Entidades
         for(int i = 0; i < estanteria.Tamaño; i++)
         {
           if(producto == estanteria.productos[i])
-            flag = false;
+          {
+          flag = true;
           contador++;
           break;
+          }
         }
         if (flag == false && contador < estanteria.Tamaño)
         {

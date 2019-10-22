@@ -35,6 +35,15 @@ namespace Test
         Console.WriteLine("Alimento 1 ha sido agregado (Verdura");
       else
         Console.WriteLine("No pudo agregarse");
+      if (est1 + alimento1)
+        Console.WriteLine("Alimento 1 ha sido agregado (Verdura)");
+      else
+        Console.WriteLine("No pudo agregarse");
+      if (est1 + ferre2)
+        Console.WriteLine("Pudo agregarse");
+      else
+        Console.WriteLine("No pudo agregarse");
+      Console.ReadKey();
 
     }
   }
