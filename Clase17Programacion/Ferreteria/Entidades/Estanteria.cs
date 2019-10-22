@@ -27,7 +27,6 @@ namespace Entidades
       }
     }
 
-
     public static bool operator +(Estanteria<T> estanteria, Producto producto)
     {
       bool flag = false;
@@ -43,29 +42,21 @@ namespace Entidades
           break;
           }
         }
+        try
+        {
         if (flag == false && contador < estanteria.Tamaño)
         {
           estanteria.productos[contador] = (T)producto;
           return true;
         }
-        /*
-        foreach(Producto a in estanteria.productos)
-        {
-          if(a.Id_prod == producto.Id_prod)
-            flag = true;
-          contador++;
-          if (flag == false && contador < estanteria.tamaño)
-          {
-            estanteria.productos[contador] = (T)producto;
-            //estanteria.productos.Add((T)producto);
-            return true;
-          }
         }
-      }*/
+        catch(InvalidCastException)
+        {
+          Console.Write("No va en esa estanterìa: ");
+        }
     }
       return false;
-    }
-
+  }
     public static bool operator -(Estanteria<T> estanteria, Producto producto)
     {
       int i = 0;

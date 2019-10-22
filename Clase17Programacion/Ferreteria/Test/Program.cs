@@ -32,7 +32,7 @@ namespace Test
 
       Console.WriteLine("ESTANTE 1: ");
       if (est1 + alimento1)
-        Console.WriteLine("Alimento 1 ha sido agregado (Verdura");
+        Console.WriteLine("Alimento 1 ha sido agregado (Verdura)");
       else
         Console.WriteLine("No pudo agregarse");
       if (est1 + alimento1)
