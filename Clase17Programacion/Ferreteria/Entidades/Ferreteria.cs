@@ -10,6 +10,11 @@ namespace Entidades
   {
     protected float peso;
 
+    public Ferreteria(int id, string desc, float peso) : base (id, desc)
+    {
+      this.peso = peso;
+    }
+
     public float Peso
     {
       get

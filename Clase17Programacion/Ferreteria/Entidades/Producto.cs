@@ -11,6 +11,12 @@ namespace Entidades
     private int id_prod;
     private string descripcion;
 
+    public Producto(int id, string desc)
+    {
+      this.id_prod = id;
+      this.descripcion = desc;
+    }
+
     public int Id_prod
     {
       get

@@ -10,6 +10,11 @@ namespace Entidades
   {
     protected DateTime vencimiento;
 
+    public Alimenticio(int id, string desc, DateTime vencimiento) : base(id, desc)
+    {
+      this.vencimiento = vencimiento;
+    }
+
     public DateTime Vencimiento
     {
       get

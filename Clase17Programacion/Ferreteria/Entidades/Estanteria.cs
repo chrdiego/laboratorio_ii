@@ -10,18 +10,20 @@ namespace Entidades
   {
     private int tamaño;
     private T[] productos;
+    //private List<T> productos;
 
     public Estanteria(int tamaño)
     {
       this.tamaño = tamaño;
       this.productos = new T[tamaño];
+      //this.productos = new List<T>();
     }
 
 
     public static bool operator +(Estanteria<T> estanteria, Producto producto)
     {
       bool flag = false;
-      float contador = 0;
+      int contador = 0;
       if(estanteria != null && producto != null)
       {
         foreach(Producto a in estanteria.productos)
@@ -33,7 +35,8 @@ namespace Entidades
           contador++;
           if (flag == false && contador < estanteria.tamaño)
           {
-            estanteria.productos.Add(producto);
+            estanteria.productos[contador] = (T)producto;
+            //estanteria.productos.Add((T)producto);
             return true;
           }
         }
@@ -56,7 +59,8 @@ namespace Entidades
       }
       if (flag == true)
       {
-        estanteria.productos.RemoveAt(i);
+        estanteria.productos[i] = null;
+        //estanteria.productos.RemoveAt(i);
         return true;
       }
       return false;
