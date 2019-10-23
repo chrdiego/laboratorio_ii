@@ -40,10 +40,7 @@ namespace Entidades
           if (e == equipo)
             return torneo;
         else
-        {
             torneo.equipos.Add(equipo);
-            return torneo;
-        }
       }
       return torneo;
       }
