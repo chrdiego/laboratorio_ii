@@ -35,13 +35,11 @@ namespace Entidades
 
       public static Torneo<T> operator +(Torneo<T> torneo, T equipo)
       {
-        foreach(Equipo e in torneo.equipos)
-        {
-          if (e == equipo)
+
+          if (torneo == equipo)
             return torneo;
         else
             torneo.equipos.Add(equipo);
-      }
       return torneo;
       }
 
