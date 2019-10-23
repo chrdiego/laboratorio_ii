@@ -35,11 +35,11 @@ namespace Entidades
 
       public static Torneo<T> operator +(Torneo<T> torneo, T equipo)
       {
-          if (torneo == equipo)
+        if (torneo == equipo)
             return torneo;
         else
             torneo.equipos.Add(equipo);
-      return torneo;
+        return torneo;
       }
 
       private static string CalcularPartido(T equipo1, T equipo2)
@@ -50,17 +50,18 @@ namespace Entidades
         int numero = random.Next();
         StringBuilder sb = new StringBuilder();
         sb.AppendLine(equipo1 + ": " + numero + " - "+ equipo1 +": " + numero2);
+        sb.AppendLine("-----PARTIDO-----PARTIDO-----PARTIDO------");
         return sb.ToString();
       }
 
-      public static string JugarPartido(Torneo<T> torneo)
+      public string JugarPartido()
       {
       Random ran1 = new Random();
       Random ran2 = new Random();
-      int index1 = ran1.Next(torneo.equipos.Count());
-      int index2 = ran2.Next(torneo.equipos.Count());
+      int index1 = ran1.Next(this.equipos.Count());
+      int index2 = ran2.Next(this.equipos.Count());
 
-      return CalcularPartido(torneo.equipos.ElementAt(index1), torneo.equipos.ElementAt(index2));
+      return CalcularPartido(this.equipos.ElementAt(index1), this.equipos.ElementAt(index2));
       }
       public static bool operator ==(Torneo<T> torneo, Equipo equipo)
       {
