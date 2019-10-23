@@ -32,7 +32,7 @@ namespace Consola
       torneoBasquet += equipoBasquet3;
 
       Console.WriteLine(torneoFtubol.Mostrar());
-
+      Console.WriteLine(torneoBasquet.Mostrar());
       Console.ReadKey();
     }
   }

@@ -58,7 +58,5 @@ namespace Entidades
       sb.AppendLine("Nombre: " + this.Nombre + "  - Creado el: " + this.FechaCreacion);
       return sb.ToString();
     }
-
-
   }
 }

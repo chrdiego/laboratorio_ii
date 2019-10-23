@@ -35,7 +35,6 @@ namespace Entidades
 
       public static Torneo<T> operator +(Torneo<T> torneo, T equipo)
       {
-
           if (torneo == equipo)
             return torneo;
         else
@@ -88,6 +87,7 @@ namespace Entidades
       {
         sb.AppendLine(e.Ficha());
       }
+      sb.AppendLine("********************************");
       return sb.ToString();
       }
     }
