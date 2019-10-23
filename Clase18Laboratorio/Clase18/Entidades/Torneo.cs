@@ -54,7 +54,7 @@ namespace Entidades
         return sb.ToString();
       }
 
-      public string JugarPartido()
+    /*  public string JugarPartido()
       {
       Random ran1 = new Random();
       Random ran2 = new Random();
@@ -73,9 +73,30 @@ namespace Entidades
           return false;
         }
       return false;
-      }
+      }*/
 
-      public static bool operator!=(Torneo<T> torneo, Equipo equipo)
+    public static string JugarPartido(Torneo<T> torneo)
+    {
+      Random ran1 = new Random();
+      Random ran2 = new Random();
+      int index1 = ran1.Next(torneo.equipos.Count());
+      int index2 = ran2.Next(torneo.equipos.Count());
+
+      return CalcularPartido(torneo.equipos.ElementAt(index1), torneo.equipos.ElementAt(index2));
+    }
+    public static bool operator ==(Torneo<T> torneo, Equipo equipo)
+    {
+      foreach (Equipo e in torneo.Equipos)
+      {
+        if (e.Nombre == equipo.Nombre)
+          return true;
+        else
+          return false;
+      }
+      return false;
+    }
+
+    public static bool operator!=(Torneo<T> torneo, Equipo equipo)
       {
         return !(torneo == equipo);
       }

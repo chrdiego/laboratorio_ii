@@ -34,8 +34,8 @@ namespace Consola
       Console.WriteLine(torneoFtubol.Mostrar());
       Console.WriteLine(torneoBasquet.Mostrar());
 
-      Console.WriteLine(torneoBasquet.JugarPartido());
-      Console.WriteLine(torneoBasquet.JugarPartido());
+      Console.WriteLine(Torneo<EquipoBasquet>.JugarPartido(torneoBasquet));
+    
       Console.ReadKey();
     }
   }
