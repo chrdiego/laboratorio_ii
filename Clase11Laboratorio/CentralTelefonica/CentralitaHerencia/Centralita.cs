@@ -10,7 +10,7 @@ namespace CentralitaHerencia
   {
 
     private List<Llamada> listaDeLlamadas;
-    string razonSocial;
+    protected string razonSocial;
 
     #region PROPIEDADES
 
@@ -54,7 +54,7 @@ namespace CentralitaHerencia
       this.listaDeLlamadas = new List<Llamada>();
     }
 
-    public Centralita(string nombreEmpresa) : this ()
+    public Centralita(string nombreEmpresa) : this()
     {
       this.razonSocial = nombreEmpresa;
     }
@@ -62,44 +62,44 @@ namespace CentralitaHerencia
     private float CalcularGanancia(Llamada.TipoLlamada tipo)
     {
       float ganancia = 0;
-      switch(tipo)
+      switch (tipo)
       {
         case (Llamada.TipoLlamada)0:
-            foreach(Llamada llamada in Llamadas)
-                    {
-                        if(llamada is Local)
-                        {
-                            Local local = (Local)llamada;
-                            ganancia += local.CostoLlamada;
-                        }
-                    }
+          foreach (Llamada llamada in Llamadas)
+          {
+            if (llamada is Local)
+            {
+              Local local = (Local)llamada;
+              ganancia += local.CostoLlamada;
+            }
+          }
           break;
         case (Llamada.TipoLlamada)1:
-                    foreach(Llamada llamada in Llamadas)
-                    {
-                        if(llamada is Provincial)
-                            {
-                            Provincial provincial = (Provincial)llamada;
-                            ganancia += provincial.CostoLlamada;
-                            }
-                    }
+          foreach (Llamada llamada in Llamadas)
+          {
+            if (llamada is Provincial)
+            {
+              Provincial provincial = (Provincial)llamada;
+              ganancia += provincial.CostoLlamada;
+            }
+          }
           break;
         case (Llamada.TipoLlamada)2:
-                    {
-                        foreach(Llamada llamada in Llamadas)
-                        {
-                            if(llamada is Local)
-                            {
-                                Local local = (Local)llamada;
-                                ganancia += local.CostoLlamada;
-                            }
-                            else if(llamada is Provincial)
-                            {
-                                Provincial provincial = (Provincial)llamada;
-                                ganancia += provincial.CostoLlamada;
-                            }
-                        }
-                    }
+          {
+            foreach (Llamada llamada in Llamadas)
+            {
+              if (llamada is Local)
+              {
+                Local local = (Local)llamada;
+                ganancia += local.CostoLlamada;
+              }
+              else if (llamada is Provincial)
+              {
+                Provincial provincial = (Provincial)llamada;
+                ganancia += provincial.CostoLlamada;
+              }
+            }
+          }
           break;
       }
       return ganancia;
@@ -108,20 +108,55 @@ namespace CentralitaHerencia
     public string Mostrar()
     {
       StringBuilder sb = new StringBuilder();
-      sb.Append("Razon social: " + this.razonSocial + "\nGanancia total: " + GananciaPorTotal.ToString() + "\nGanancia local: " + GananciaPorLocal.ToString() + "\nGanancia provincial: " + GananciaPorProvincial.ToString() + "\n").ToString();
-      foreach(Llamada llamada in this.Llamadas)
-            {
-                sb.AppendLine("Detalles: ");
-                sb.Append(llamada.Mostrar());
-                sb.AppendLine("------------------------\n");
-            }
+      sb.Append("*********************************************\nRazon social: " + this.razonSocial + "\nGanancia total: " + GananciaPorTotal.ToString() + "\nGanancia local: " + GananciaPorLocal.ToString() + "\nGanancia provincial: " + GananciaPorProvincial.ToString() + "\n-------------------------------------\n").ToString();
+      foreach (Llamada llamada in this.Llamadas)
+      {
+        sb.AppendLine("Detalles: ");
+        sb.Append(llamada.ToString());
+        sb.AppendLine("------------------------\n");
+      }
       sb.AppendLine("***********************************");
       return sb.ToString();
+    }
+
+    public override string ToString()
+    {
+      return this.Mostrar();
     }
 
     public void OrdenarLlamadas()
     {
       this.Llamadas.Sort(Llamada.OrdenarPorDuracion);
+    }
+
+    public static bool operator ==(Centralita c, Llamada llamada)
+    {
+      foreach(Llamada l in c.listaDeLlamadas)
+      {
+        if (l.Equals(llamada))
+          return true;
+      }
+      return false;
+    }
+
+    public static Centralita operator +(Centralita c, Llamada nuevaLlamada)
+    {
+      if (!(c == nuevaLlamada))
+      {
+        c.AgregarLlamada(nuevaLlamada);
+        return c;
+      }
+      else return c;
+    }
+
+    public static bool operator !=(Centralita c, Llamada llamada)
+    {
+      return !(c == llamada);
+    }
+
+    private void AgregarLlamada(Llamada nuevaLlamada)
+    {
+      this.listaDeLlamadas.Add(nuevaLlamada);
     }
     #endregion
   }
