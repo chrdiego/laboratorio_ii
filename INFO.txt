@@ -1,6 +1,7 @@
 federicodavila@gmail.com
 
 PRIMER PARCIAL DE PROGRAMACION: 7 de OCT.
+SEGUNDO PARCIAL DE PROGRAMACION: 25 de OCT.(Desde excepciones en adelante)
 
 Fecha de parcial laboratorio: 8 de oct. y 19 de nov.
 
