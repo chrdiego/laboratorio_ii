@@ -22,7 +22,15 @@ namespace PelotitaForm
       PelotitaControl pelotita = new PelotitaControl();
       pelotita.setImage(Properties.Resources.pelotacuadrada);
       Controls.Add(pelotita);
-      pelotita.Show();
+    }
+
+    private void button1_Click(object sender, EventArgs e)
+    {
+      foreach(Control control in this.Controls)
+      {
+        if (control is PelotitaControl)
+          Controls.Remove(control);
+      }
     }
   }
 }
