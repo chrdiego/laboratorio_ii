@@ -29,7 +29,7 @@ namespace PelotitaForm
     private void InitializeComponent()
     {
             this.btnIniciar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnTerminar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnIniciar
@@ -42,22 +42,22 @@ namespace PelotitaForm
             this.btnIniciar.UseVisualStyleBackColor = true;
             this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
             // 
-            // button1
+            // btnTerminar
             // 
-            this.button1.Location = new System.Drawing.Point(473, 223);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Terminar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnTerminar.Location = new System.Drawing.Point(473, 223);
+            this.btnTerminar.Name = "btnTerminar";
+            this.btnTerminar.Size = new System.Drawing.Size(75, 23);
+            this.btnTerminar.TabIndex = 1;
+            this.btnTerminar.Text = "Terminar";
+            this.btnTerminar.UseVisualStyleBackColor = true;
+            this.btnTerminar.Click += new System.EventHandler(this.btnTermianr_Click);
             // 
             // PelotitaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(591, 275);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnTerminar);
             this.Controls.Add(this.btnIniciar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "PelotitaForm";
@@ -69,7 +69,7 @@ namespace PelotitaForm
     #endregion
 
     private System.Windows.Forms.Button btnIniciar;
-    private System.Windows.Forms.Button button1;
+    private System.Windows.Forms.Button btnTerminar;
   }
 }
 

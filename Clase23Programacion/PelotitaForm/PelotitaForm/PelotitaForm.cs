@@ -21,10 +21,11 @@ namespace PelotitaForm
     {
       PelotitaControl pelotita = new PelotitaControl();
       pelotita.setImage(Properties.Resources.pelotacuadrada);
+      pelotita.Location = new Point(25, 25);
       Controls.Add(pelotita);
     }
 
-    private void button1_Click(object sender, EventArgs e)
+    private void btnTermianr_Click(object sender, EventArgs e)
     {
       foreach(Control control in this.Controls)
       {
