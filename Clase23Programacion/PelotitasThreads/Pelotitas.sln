@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2047
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pelotitas", "Pelotitas\Pelotitas.csproj", "{366CA61D-830C-4D5A-8475-D85886C769FF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{366CA61D-830C-4D5A-8475-D85886C769FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{366CA61D-830C-4D5A-8475-D85886C769FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{366CA61D-830C-4D5A-8475-D85886C769FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{366CA61D-830C-4D5A-8475-D85886C769FF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AE4DC064-EC80-47BB-8A04-ABDE38F66655}
+	EndGlobalSection
+EndGlobal
