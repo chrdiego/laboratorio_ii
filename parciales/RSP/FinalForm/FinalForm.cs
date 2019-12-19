@@ -22,7 +22,20 @@ namespace Utn
 
         private void btnEscapaProfesor_Click(object sender, EventArgs e)
         {
-          
+          foreach(Alumno a in profesor.Alumnos)
+      {
+        if (a.TieneManejadores())
+        {
+          MessageBox.Show("Vamos vamos entregeeeeen...!");
+          break;
+        }
+        else
+        {
+          this.Close();
+        }
+      }
+      if (profesor.Alumnos.Count == 0)
+        this.Close();
         }
 
         private void BtnInitExam_Click(object sender, EventArgs e)
