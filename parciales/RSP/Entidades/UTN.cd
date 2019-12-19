@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="Entidades.Alumno">
+    <Position X="6.25" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEIBIAADEAAAAAAAAAAAEAAAIBAAAAAAAAAA=</HashCode>
+      <FileName>Alumno.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Entidades.AlumnoDB">
+    <Position X="9" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAABAAAAAA=</HashCode>
+      <FileName>AlumnoDB.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entidades.AlumnoException">
+    <Position X="9" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AlumnoException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entidades.AlumnoExtension">
+    <Position X="8.5" Y="6" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAQAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AlumnoExtension.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entidades.Profesor&lt;TUniversitario&gt;">
+    <Position X="3" Y="5.25" Width="5.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAESAAABAgAAAQAAAAAAAAAAAAAAiA=</HashCode>
+      <FileName>Profesor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entidades.Universitario">
+    <Position X="3" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAACAAAAAhAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Universitario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Entidades.IUniersitario">
+    <Position X="10.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IUniversitario.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="Entidades.EMateria">
+    <Position X="8.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Tipo.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Delegate Name="Entidades.AlumnoDelegate">
+    <Position X="8.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Alumno.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

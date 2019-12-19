@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="SistemaSolar.FinalForm">
+    <Position X="0.5" Y="0.75" Width="4" />
+    <Members>
+      <Field Name="btnInitExam" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Field Name="groupBox1" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+      <Field Name="label2" Hidden="true" />
+      <Field Name="label3" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>EAAAAAEIACAAADACgACkAABCAAAAAAAAACAIAEAEAAA=</HashCode>
+      <FileName>FinalForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
