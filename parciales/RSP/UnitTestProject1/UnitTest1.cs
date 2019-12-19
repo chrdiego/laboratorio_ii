@@ -9,7 +9,7 @@ namespace UnitTestProject1
   {
     [TestMethod]
     [ExpectedException (typeof(AlumnoException))]
-    public void TestMethod1()
+    public void AlumnoRepetidoTest()
     {
       Profesor<Alumno> profesor = new Profesor<Alumno>(1, "Juan");
       Alumno a1 = new Alumno(2, "Carlos");

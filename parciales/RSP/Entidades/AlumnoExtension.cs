@@ -10,13 +10,14 @@ namespace Entidades
     {
         public static bool GuardarTxt(this Profesor<Alumno> plan)
     {
+      string nombre = plan.Nombre;
       bool aux = false;
       if (plan != null)
       {
         try
         {
           string desktop = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-          StreamWriter sw = new StreamWriter(Path.Combine(desktop, "planeta.txt"));
+          StreamWriter sw = new StreamWriter(Path.Combine(desktop, $"{nombre}.txt"));
           sw.WriteLine(plan.ToString());
           sw.Close();
           aux = true;
@@ -37,8 +38,8 @@ namespace Entidades
         {
           XmlTextWriter writer;
           XmlSerializer ser;
-
-          writer = new XmlTextWriter(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "/satelites.xml", Encoding.ASCII);
+          string nombre = sat.Nombre;
+          writer = new XmlTextWriter(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "/" + nombre +".xml", Encoding.ASCII);
           ser = new XmlSerializer(typeof(Alumno));
           ser.Serialize(writer, sat);
           writer.Close();
@@ -58,7 +59,7 @@ namespace Entidades
       XmlTextReader reader;
       XmlSerializer ser;
 
-      reader = new XmlTextReader(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "/archivo.xml");
+      reader = new XmlTextReader(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "/" + nombreAl + ".xml");
       ser = new XmlSerializer(typeof(Alumno));
       aux = (Alumno)ser.Deserialize(reader);
       reader.Close();
