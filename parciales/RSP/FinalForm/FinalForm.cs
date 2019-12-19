@@ -40,7 +40,18 @@ namespace Utn
 
         private void BtnInitExam_Click(object sender, EventArgs e)
         {
-          
+          foreach(Alumno a in profesor.Alumnos)
+      {
+        if (!a.TieneManejadores())
+        {
+          if(a.HiloExamen is null)
+          {
+            Thread t1 = new Thread(a.InvocarEvent);
+            if (!t1.IsAlive)
+              t1.Start();
+          }
+        }
+      }
         }
 
         private void BtnCargarEventos_Click(object sender, EventArgs e)
