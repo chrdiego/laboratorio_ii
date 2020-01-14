@@ -14,11 +14,11 @@ namespace PracticaPseudoCodigoSQL
             List<Alumno> lista = new List<Alumno>();
             Alumno a1 = new Alumno("Juan", "Perez", 5);
             Alumno a2 = new Alumno("Julio", "Cesar", 10);
-            Alumno a3 = new Alumno("Carlos", "Judio", 10);
-            Alumno a4 = new Alumno("Matias", "Pija", 10);
-            Alumno a5 = new Alumno("Roberto", "Caca", 3);
-            Alumno a6 = new Alumno("Sergio", "Poronga", 2);
-            Alumno a7 = new Alumno("Cristian", "Vergara", 1);
+            Alumno a3 = new Alumno("Carlos", "Emanuel", 10);
+            Alumno a4 = new Alumno("Matias", "Roman", 10);
+            Alumno a5 = new Alumno("Roberto", "Carlos", 3);
+            Alumno a6 = new Alumno("Sergio", "Maestro", 2);
+            Alumno a7 = new Alumno("Cristian", "Raul", 1);
             Alumno a8 = new Alumno("Jesus", "Dios", 10);
 
             lista.Add(a1);
