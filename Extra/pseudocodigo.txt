@@ -1,0 +1,60 @@
+			HECHO EN "PSEUDOCODIGO"
+
+a) ORDENAR TABLA POR NOTA
+
+void OrdenarNota(List<Alumno> lista)
+{
+	Alumno aux;
+	for(int i = 0; i < lista.length; i++)
+	{
+		for(int j = 0; j < lista.length - 1; j++)
+		{
+			if(lista[j].nota < lista[j + 1].nota)
+			{
+				aux = lista[j];
+				lista[j] = lista[j + 1];
+				lista[j+1] = aux;
+			}
+		}
+	}
+}
+
+________________________________________________________________________
+
+b) ARMAR UNA LISTA CON AQUELLOS QUE TENGAN UNA NOTA INFERIOR AL PROMEDIO
+
+List<Alumno> alumnosConNotaInferiorALaMedia;
+int prom = 0;
+for(int i = 0; i < lista.length; i++)
+{
+	prom += lista[i].nota;
+}
+
+prom = prom / lista.length;
+
+for(int i = 0; i < lista.length; i++)
+{
+	if(lista[i].nota < prom)
+	{
+		alumnosConNotaInferiorALaMedia.Add(lista[i]);
+	}
+}
+
+_________________________________________________________________________
+
+c) DEVOLVER LA MEDIANA DE LAS NOTAS
+
+int mediana(Lista<Alumno> alumnos)
+{
+	int mediana;
+	int posicion = alumnos.length / 2;
+	if((alumnos.length % 2) == 0)
+	{
+		mediana = (alumnos[posicion].nota + alumnos[posicion -1].nota) / 2;	
+	}
+	else
+	{
+		mediana = alumnos[posicion].nota;
+	}
+	return mediana;
+}
